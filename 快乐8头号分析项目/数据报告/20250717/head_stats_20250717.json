@@ -1,29 +1,29 @@
 {
     "0": {
-        "mean": 2.1333333333333333,
-        "std": 1.2578641509408803,
+        "mean": 2.2333333333333334,
+        "std": 1.2023125864580957,
         "recent_periods_avg": 2.4,
         "historical_min": 0,
         "historical_max": 5
     },
     "1": {
         "mean": 2.466666666666667,
-        "std": 1.1175369742826806,
-        "recent_periods_avg": 2.4,
+        "std": 1.1175369742826808,
+        "recent_periods_avg": 2.2,
         "historical_min": 0,
         "historical_max": 5
     },
     "2": {
         "mean": 2.6,
         "std": 1.1430952132988164,
-        "recent_periods_avg": 2.4,
+        "recent_periods_avg": 2.8,
         "historical_min": 1,
         "historical_max": 5
     },
     "3": {
-        "mean": 2.8333333333333335,
-        "std": 1.5723301886761005,
-        "recent_periods_avg": 3.4,
+        "mean": 2.8666666666666667,
+        "std": 1.564892612574067,
+        "recent_periods_avg": 3.6,
         "historical_min": 0,
         "historical_max": 6
     },
@@ -35,29 +35,29 @@
         "historical_max": 4
     },
     "5": {
-        "mean": 2.566666666666667,
-        "std": 1.430229196861662,
-        "recent_periods_avg": 3.2,
+        "mean": 2.5,
+        "std": 1.4548768561863463,
+        "recent_periods_avg": 2.4,
         "historical_min": 0,
         "historical_max": 5
     },
     "6": {
-        "mean": 2.3333333333333335,
-        "std": 0.9775252199076786,
-        "recent_periods_avg": 2.2,
+        "mean": 2.3,
+        "std": 1.004987562112089,
+        "recent_periods_avg": 2.0,
         "historical_min": 1,
         "historical_max": 4
     },
     "7": {
         "mean": 2.3333333333333335,
         "std": 1.1642832797715321,
-        "recent_periods_avg": 2.2,
+        "recent_periods_avg": 2.8,
         "historical_min": 0,
         "historical_max": 5
     },
     "8": {
-        "mean": 0.4,
-        "std": 0.4898979485566357,
+        "mean": 0.36666666666666664,
+        "std": 0.48189440982669857,
         "recent_periods_avg": 0.0,
         "historical_min": 0,
         "historical_max": 1
