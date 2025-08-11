@@ -1,0 +1,72 @@
+{
+    "0": {
+        "mean": 2.2,
+        "std": 1.0132456102380443,
+        "recent_periods_avg": 2.2,
+        "historical_min": 0,
+        "historical_max": 4
+    },
+    "1": {
+        "mean": 2.033333333333333,
+        "std": 1.2242911781471306,
+        "recent_periods_avg": 2.0,
+        "historical_min": 0,
+        "historical_max": 5
+    },
+    "2": {
+        "mean": 2.033333333333333,
+        "std": 1.2242911781471304,
+        "recent_periods_avg": 2.4,
+        "historical_min": 0,
+        "historical_max": 4
+    },
+    "3": {
+        "mean": 2.1333333333333333,
+        "std": 1.334998959633386,
+        "recent_periods_avg": 1.2,
+        "historical_min": 0,
+        "historical_max": 5
+    },
+    "4": {
+        "mean": 1.8333333333333333,
+        "std": 1.0671873729054748,
+        "recent_periods_avg": 1.8,
+        "historical_min": 0,
+        "historical_max": 4
+    },
+    "5": {
+        "mean": 2.0,
+        "std": 1.3165611772087666,
+        "recent_periods_avg": 1.8,
+        "historical_min": 0,
+        "historical_max": 5
+    },
+    "6": {
+        "mean": 1.7666666666666666,
+        "std": 1.085766498326822,
+        "recent_periods_avg": 1.6,
+        "historical_min": 0,
+        "historical_max": 4
+    },
+    "7": {
+        "mean": 1.8333333333333333,
+        "std": 0.93392838174146,
+        "recent_periods_avg": 2.0,
+        "historical_min": 0,
+        "historical_max": 4
+    },
+    "8": {
+        "mean": 2.2666666666666666,
+        "std": 1.4817407180595246,
+        "recent_periods_avg": 2.4,
+        "historical_min": 0,
+        "historical_max": 7
+    },
+    "9": {
+        "mean": 1.9,
+        "std": 1.044030650891055,
+        "recent_periods_avg": 2.6,
+        "historical_min": 0,
+        "historical_max": 4
+    }
+}
