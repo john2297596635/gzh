@@ -1,0 +1,705 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>快乐8头部分析 - 2025年09月11日</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <style>
+            :root {
+                --primary: #4285F4;
+                --secondary: #34A853;
+                --light: #F8F9FC;
+                --dark: #202124;
+                --gray: #5F6368;
+                --border: #E0E0E0;
+                --card-bg: #FFFFFF;
+                --shadow: rgba(60, 64, 67, 0.1);
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background-color: var(--light);
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            .header {
+                text-align: center;
+                background-color: var(--card-bg);
+                border-radius: 12px;
+                padding: 30px;
+                margin-bottom: 30px;
+                box-shadow: 0 4px 12px var(--shadow);
+                border: 1px solid var(--border);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .header::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(90deg, #4285F4, #34A853, #FBBC05, #EA4335);
+            }
+
+            .tag {
+                background-color: var(--primary);
+                color: white;
+                display: inline-block;
+                padding: 6px 15px;
+                border-radius: 20px;
+                font-size: 0.85;
+                margin-bottom: 15px;
+                font-weight: 600;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+                margin: 15px 0;
+                color: var(--dark);
+                font-weight: 700;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+                color: var(--gray);
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            .data-overview {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin: 25px 0;
+            }
+
+            .overview-card {
+                background: var(--card-bg);
+                border-radius: 10px;
+                padding: 15px 20px;
+                min-width: 150px;
+                text-align: center;
+                box-shadow: 0 2px 6px var(--shadow);
+                border: 1px solid var(--border);
+            }
+
+            .overview-card .value {
+                font-size: 1.8rem;
+                font-weight: 700;
+                color: var(--primary);
+                margin: 5px 0;
+            }
+
+            .overview-card .label {
+                font-size: 0.9rem;
+                color: var(--gray);
+            }
+
+            .section {
+                background: var(--card-bg);
+                border-radius: 12px;
+                padding: 30px;
+                margin: 30px 0;
+                box-shadow: 0 4px 12px var(--shadow);
+                border: 1px solid var(--border);
+            }
+
+            .section-title {
+                color: var(--dark);
+                font-size: 1.6rem;
+                margin-bottom: 25px;
+                padding-bottom: 15px;
+                border-bottom: 2px solid #E8EAED;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            .section-title::after {
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 50px;
+                height: 3px;
+                background: var(--primary);
+                border-radius: 3px;
+            }
+
+            .section-title i {
+                margin-right: 12px;
+                color: var(--primary);
+            }
+
+            .charts-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+                gap: 25px;
+            }
+
+            .chart-card {
+                background: #FFFFFF;
+                border-radius: 12px;
+                padding: 20px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+                border: 1px solid var(--border);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .chart-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .card-title {
+                font-size: 1.3rem;
+                color: var(--dark);
+                margin-bottom: 15px;
+                text-align: center;
+                font-weight: 600;
+            }
+
+            .chart-container {
+                margin: 0 auto;
+                overflow: hidden;
+                border-radius: 10px;
+                border: 1px solid var(--border);
+                background: white;
+            }
+
+            .chart-img {
+                width: 100%;
+                height: 220px;
+                object-fit: contain;
+                display: block;
+                background: #FFFFFF;
+            }
+
+            .stats-summary {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 20px;
+                background: #F8F9FF;
+                padding: 15px;
+                border-radius: 10px;
+            }
+
+            .stat-item {
+                text-align: center;
+            }
+
+            .stat-label {
+                display: block;
+                font-size: 0.85rem;
+                color: var(--gray);
+                margin-bottom: 5px;
+            }
+
+            .stat-value {
+                display: block;
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: var(--primary);
+            }
+
+            .wechat-footer {
+                background: #FFFFFF;
+                border-radius: 12px;
+                padding: 30px;
+                margin: 40px 0;
+                box-shadow: 0 4px 12px var(--shadow);
+                border: 1px solid var(--border);
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .wechat-footer::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(90deg, #EA4335, #FBBC05, #34A853, #4285F4);
+            }
+
+            .wechat-title {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+                color: var(--dark);
+                font-weight: 600;
+            }
+
+            .wechat-subtitle {
+                font-size: 1.05rem;
+                color: var(--gray);
+                margin-bottom: 25px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .wechat-icon {
+                width: 140;
+                height: 140px;
+                margin: 0 auto 20px;
+                border: 1px solid #EAEAEA;
+                border-radius: 10px;
+                background: white;
+                padding: 10px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .disclaimer {
+                background: #FFF8F5;
+                border-radius: 10px;
+                padding: 20px;
+                margin: 20px 0;
+                font-size: 0.9rem;
+                color: #5F6368;
+                border-left: 4px solid #EA4335;
+            }
+
+            .disclaimer-title {
+                color: #EA4335;
+                font-weight: 700;
+                margin-bottom: 10px;
+                font-size: 1.05rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .disclaimer-title i {
+                margin-right: 10px;
+            }
+
+            .action-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin: 30px 0;
+            }
+
+            .btn {
+                padding: 12px 25px;
+                border-radius: 8px;
+                border: none;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .btn-print {
+                background: var(--primary);
+                color: white;
+                box-shadow: 0 3px 6px rgba(66, 133, 244, 0.3);
+            }
+
+            .btn-print:hover {
+                background: #3367D6;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 10px rgba(66, 133, 244, 0.4);
+            }
+
+            .btn-print i {
+                margin-right: 8px;
+            }
+
+            .github-link {
+                text-align: center;
+                margin: 20px 0;
+                color: #5F6368;
+            }
+
+            .github-link a {
+                color: #4285F4;
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+            @media (max-width: 768px) {
+                .charts-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .overview-card {
+                    min-width: 120px;
+                    padding: 12px;
+                }
+
+                .overview-card .value {
+                    font-size: 1.5rem;
+                }
+
+                .header {
+                    padding: 20px;
+                }
+
+                h1 {
+                    font-size: 1.8rem;
+                }
+
+                .section {
+                    padding: 20px;
+                }
+
+                .chart-card {
+                    padding: 15px;
+                }
+
+                .stat-value {
+                    font-size: 1.2rem;
+                }
+
+                .chart-img {
+                    height: 180px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .data-overview {
+                    gap: 10px;
+                }
+
+                .overview-card {
+                    min-width: 100px;
+                    padding: 10px;
+                }
+
+                .overview-card .value {
+                    font-size: 1.3rem;
+                }
+
+                .header {
+                    padding: 15px;
+                }
+
+                h1 {
+                    font-size: 1.6rem;
+                }
+
+                .section-title {
+                    font-size: 1.4rem;
+                }
+
+                .stats-summary {
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                .wechat-footer {
+                    padding: 20px;
+                }
+
+                .btn {
+                    padding: 10px 20px;
+                    font-size: 0.9rem;
+                }
+
+                .chart-img {
+                    height: 160px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 报告头部 -->
+        <header class="header">
+            <div class="tag"><i class="fas fa-chart-line"></i> 专业数据分析</div>
+            <h1>快乐8头部号码分布报告</h1>
+            <p class="subtitle">2025年09月11日 更新 · 基于30期历史开奖数据</p>
+
+            <div class="data-overview">
+                <div class="overview-card">
+                    <div class="value">30</div>
+                    <div class="label">分析期数</div>
+                </div>
+                <div class="overview-card">
+                    <div class="value">9</div>
+                    <div class="label">头部区间</div>
+                </div>
+                <div class="overview-card">
+                    <div class="value">2025244</div>
+                    <div class="label">最新期号</div>
+                </div>
+                <div class="overview-card">
+                    <div class="value">5</div>
+                    <div class="label">近期平均</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- 核心指标 -->
+        <section class="section">
+            <h2 class="section-title"><i class="fas fa-chart-bar"></i> 头部号码详细分析</h2>
+            <div class="charts-grid">
+                
+        <div class="chart-card">
+            <h3 class="card-title">0头部分析</h3>
+            <div class="chart-container">
+                <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/0头部分析.png" alt="0头部分析图" class="chart-img">
+            </div>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">历史平均</span>
+                    <span class="stat-value">2.17</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">近期平均</span>
+                    <span class="stat-value">2.40</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最高频次</span>
+                    <span class="stat-value">5</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card">
+            <h3 class="card-title">1头部分析</h3>
+            <div class="chart-container">
+                <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/1头部分析.png" alt="1头部分析图" class="chart-img">
+            </div>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">历史平均</span>
+                    <span class="stat-value">2.40</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">近期平均</span>
+                    <span class="stat-value">3.00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最高频次</span>
+                    <span class="stat-value">5</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card">
+            <h3 class="card-title">2头部分析</h3>
+            <div class="chart-container">
+                <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/2头部分析.png" alt="2头部分析图" class="chart-img">
+            </div>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">历史平均</span>
+                    <span class="stat-value">2.67</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">近期平均</span>
+                    <span class="stat-value">2.80</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最高频次</span>
+                    <span class="stat-value">6</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card">
+            <h3 class="card-title">3头部分析</h3>
+            <div class="chart-container">
+                <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/3头部分析.png" alt="3头部分析图" class="chart-img">
+            </div>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">历史平均</span>
+                    <span class="stat-value">2.17</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">近期平均</span>
+                    <span class="stat-value">2.00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最高频次</span>
+                    <span class="stat-value">5</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card">
+            <h3 class="card-title">4头部分析</h3>
+            <div class="chart-container">
+                <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/4头部分析.png" alt="4头部分析图" class="chart-img">
+            </div>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">历史平均</span>
+                    <span class="stat-value">2.77</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">近期平均</span>
+                    <span class="stat-value">2.00</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最高频次</span>
+                    <span class="stat-value">5</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card">
+            <h3 class="card-title">5头部分析</h3>
+            <div class="chart-container">
+                <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/5头部分析.png" alt="5头部分析图" class="chart-img">
+            </div>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">历史平均</span>
+                    <span class="stat-value">2.80</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">近期平均</span>
+                    <span class="stat-value">2.20</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最高频次</span>
+                    <span class="stat-value">6</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card">
+            <h3 class="card-title">6头部分析</h3>
+            <div class="chart-container">
+                <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/6头部分析.png" alt="6头部分析图" class="chart-img">
+            </div>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">历史平均</span>
+                    <span class="stat-value">2.60</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">近期平均</span>
+                    <span class="stat-value">2.60</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最高频次</span>
+                    <span class="stat-value">5</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card">
+            <h3 class="card-title">7头部分析</h3>
+            <div class="chart-container">
+                <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/7头部分析.png" alt="7头部分析图" class="chart-img">
+            </div>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">历史平均</span>
+                    <span class="stat-value">2.13</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">近期平均</span>
+                    <span class="stat-value">2.40</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最高频次</span>
+                    <span class="stat-value">5</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-card">
+            <h3 class="card-title">8头部分析</h3>
+            <div class="chart-container">
+                <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/8头部分析.png" alt="8头部分析图" class="chart-img">
+            </div>
+
+            <div class="stats-summary">
+                <div class="stat-item">
+                    <span class="stat-label">历史平均</span>
+                    <span class="stat-value">0.30</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">近期平均</span>
+                    <span class="stat-value">0.60</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">最高频次</span>
+                    <span class="stat-value">1</span>
+                </div>
+            </div>
+        </div>
+        
+            </div>
+        </section>
+
+        <!-- 公众号信息 -->
+        <section class="wechat-footer">
+            <h2 class="wechat-title">关注公众号获取每日分析</h2>
+            <p class="wechat-subtitle">每天9:00前更新最新数据报告 · 第一时间获取专业分析</p>
+            <img src="https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/公众号.jpg" class="wechat-icon" alt="快乐吧数据公众号">
+            <p><strong>微信公众号: 快乐吧数据</strong></p>
+        </section>
+
+        <!-- 法律声明 -->
+        <div class="disclaimer">
+            <div class="disclaimer-title"><i class="fas fa-exclamation-circle"></i> 法律声明</div>
+            <p>本分析报告基于中国福利彩票官网公开数据制作，仅供历史数据分析与参考，严禁用于赌博或任何违法违规用途。</p>
+            <p>根据中国法律，禁止向未成年人传播彩票相关信息。数据统计周期: 2025215期-2025244期 | 生成时间: 2025-09-11 22:29</p>
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="action-buttons">
+            <button class="btn btn-print" onclick="printReport()"><i class="fas fa-print"></i> 打印报告</button>
+            <button class="btn" onclick="location.reload()"><i class="fas fa-sync"></i> 刷新报告</button>
+        </v>
+
+        <!-- GitHub链接 -->
+        <div class="github-link">
+            <p>永久访问地址: <a href="https://john2297596635.github.io/gzh/数据报告/20250911/report.html" target="_blank">点击查看完整版本</a></p>
+            <p class="small">提示: 请收藏此页面链接，后续更新将在同一位置查看</p>
+        </div>
+
+        <script>
+            // 打印功能
+            function printReport() {
+                window.print();
+            }
+
+            // 图片加载失败处理
+            document.querySelectorAll('.chart-img').forEach(img => {
+                img.onerror = function() {
+                    console.log('图片加载失败:', this.src);
+                    this.src = this.src.replace(
+                        'https://raw.githubusercontent.com/john2297596635/gzh/main/数据报告/20250911/images/', 
+                        'images/'
+                    );
+                }
+            });
+        </script>
+    </body>
+    </html>
+    
